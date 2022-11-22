@@ -1,17 +1,15 @@
-import Header from "components/layout/Header";
-import Footer from "components/layout/Footer";
+import { Outlet } from 'react-router-dom';
 
-type Props = {
-  children: React.ReactNode;
-};
+import Header from 'components/layout/Header';
+import Footer from 'components/layout/Footer';
 
-const DefaultLayout = ({ children }: Props) => {
+const DefaultLayout = () => {
   return (
-    <div>
+    <>
       <Header />
-      {children}
+      <Outlet />
       <Footer />
-    </div>
+    </>
   );
 };
 
