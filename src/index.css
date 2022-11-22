@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "NotoSansJP";
+  src: url("assets/fonts/NotoSansJP-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "NotoSansJP";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
