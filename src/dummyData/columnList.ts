@@ -1,3 +1,4 @@
+import { RecommendType } from "types/column.type";
 import Column1 from "assets/img/column/column-1.jpg";
 import Column2 from "assets/img/column/column-2.jpg";
 import Column3 from "assets/img/column/column-3.jpg";
@@ -7,7 +8,7 @@ import Column6 from "assets/img/column/column-6.jpg";
 import Column7 from "assets/img/column/column-7.jpg";
 import Column8 from "assets/img/column/column-8.jpg";
 
-export const recommendItems = [
+export const recommendItems: RecommendType[] = [
   {
     id: "c0",
     content:

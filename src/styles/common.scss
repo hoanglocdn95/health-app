@@ -11,18 +11,21 @@
   }
 }
 
-.not-found {
-  display: block;
-  margin: 50px auto;
-  font-weight: bold;
-  font-size: 40px;
-  width: 350px;
-}
+.not-found,
 .development {
   display: block;
   margin: 50px auto;
   font-weight: bold;
   font-size: 40px;
+  font-family: "Inter";
+  text-align: center;
+}
+
+.development {
+  margin: 0;
+  height: calc(100vh - 128px);
+  padding-top: 164px;
+  cursor: pointer;
 }
 
 .buttonStyle {

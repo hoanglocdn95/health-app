@@ -29,12 +29,19 @@ const Header = () => {
       title: NAVIGATION_MENU.NEWS,
       srcIcon: IconInfo,
       action: () => navigate(ROUTES.DEVELOPMENT),
+      notices: 11,
     },
   ];
   const renderNavbar = () => {
-    return navbarItems.map(({ action, srcIcon, title }) => {
+    return navbarItems.map((item) => {
+      const { action, srcIcon, title } = item;
       return (
         <div className="navbarItem" onClick={action} key={title}>
+          {title === NAVIGATION_MENU.NEWS && !!item?.notices ? (
+            <div className="notice">
+              {item?.notices > 9 ? `9+` : item?.notices}
+            </div>
+          ) : null}
           <img src={srcIcon} alt="" />
           <p>{title}</p>
         </div>

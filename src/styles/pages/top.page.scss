@@ -23,6 +23,11 @@
   background-position: center;
   &__circle {
     width: 181px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.4s;
+    }
   }
   &__data {
     display: flex;
@@ -46,6 +51,7 @@
   width: calc(37 / 64 * 100%);
   padding: 12px 0 12px 60px;
   background-color: $dark_600;
+  cursor: pointer;
 }
 .transitInput {
   margin-top: 25px;
@@ -61,6 +67,11 @@
     background-size: contain;
     background-position: center;
     margin-right: 84px;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.4s;
+    }
     > img {
       width: 56px;
       height: 56px;
@@ -97,10 +108,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    cursor: pointer;
     > img {
       width: 100%;
       position: absolute;
       top: 0;
+    }
+    &:hover {
+      transform: scale(1.05);
+      transition: transform 0.4s;
     }
   }
   &__info {

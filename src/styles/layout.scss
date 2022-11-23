@@ -3,6 +3,7 @@
   height: 64px;
   background-color: $dark_text_500;
   position: fixed;
+  z-index: $highestLayer;
   &__container {
     width: 100%;
     max-width: $containerMaxWidth;
@@ -10,7 +11,8 @@
     justify-content: space-between;
     margin: 0 auto;
   }
-  &__left, &__right {
+  &__left,
+  &__right {
     display: flex;
     align-items: center;
   }
@@ -29,11 +31,26 @@
       align-items: center;
       cursor: pointer;
       margin-left: 35px;
-      img {
+      position: relative;
+      > div.notice {
+        border-radius: 999px;
+        background-color: $primary_500;
+        height: 16px;
+        width: 16px;
+        color: $light;
+        font-size: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        position: absolute;
+        top: 0;
+        left: 23px;
+      }
+      > img {
         height: 32px;
         width: 32px;
       }
-      p {
+      > p {
         color: $light;
         font-size: 16px;
         line-height: 23px;

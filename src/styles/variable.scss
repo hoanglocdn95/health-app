@@ -1,13 +1,20 @@
-$light: #FFFFFF;
-$primary_300: #FFCC21;
-$primary_400: #FF963C;
-$primary_500: #EA6C00;
-$secondary_300: #8FE9D0;
-$dark_600: #2E2E2E;
+$light: #ffffff;
+$primary_300: #ffcc21;
+$primary_400: #ff963c;
+$primary_500: #ea6c00;
+$secondary_300: #8fe9d0;
+$dark_600: #2e2e2e;
 $dark_text_500: #414141;
 $gray_400: #777777;
 
 $light_dark_500: #8b8b8b;
-$bg_primary: #F2F2F2;
+$bg_primary: #f2f2f2;
 
 $containerMaxWidth: 960px;
+
+$lowestLayer: 1;
+$lowerLayer: 2;
+$normalLayer: 3;
+$mediumLayer: 4;
+$higherLayer: 5;
+$highestLayer: 6;
