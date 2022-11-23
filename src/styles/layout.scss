@@ -5,7 +5,7 @@
   position: fixed;
   &__container {
     width: 100%;
-    max-width: 960px;
+    max-width: $containerMaxWidth;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
@@ -102,16 +102,13 @@
 }
 
 .footer {
-  width: 100vw;
   height: 128px;
   background-color: $dark_text_500;
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 0;
   &__container {
     width: 100%;
-    max-width: 960px;
+    max-width: $containerMaxWidth;
     display: flex;
     margin: 0 auto;
     & > p {

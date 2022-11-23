@@ -1,0 +1,132 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 0;
+  width: 100%;
+  background-color: $bg_primary;
+  &__info {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    height: 312px;
+  }
+}
+.achievementRate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(27 / 64 * 100%);
+  background-image: url("../../assets/img/meal/d01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__circle {
+    width: 181px;
+  }
+  &__data {
+    display: flex;
+    align-items: baseline;
+    > p {
+      font-family: "Inter";
+      color: $light;
+      &:first-child {
+        font-size: 18px;
+        line-height: 22px;
+        margin-right: 4px;
+      }
+      &:last-child {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+}
+.percentFat {
+  width: calc(37 / 64 * 100%);
+  padding: 12px 0 12px 60px;
+  background-color: $dark_600;
+}
+.transitInput {
+  margin-top: 25px;
+  width: fit-content;
+  display: flex;
+  padding-left: 84px;
+  &__item {
+    width: 116px;
+    height: 134px;
+    position: relative;
+    background: url("../../assets/img/bg_shape.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin-right: 84px;
+    > img {
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      top: 27px;
+      left: 30px;
+    }
+    > p {
+      font-family: "Inter";
+      color: $light;
+      font-size: 20px;
+      line-height: 24px;
+      position: absolute;
+      bottom: 27px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
+.mealHistory {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 960px;
+  width: 100%;
+  margin: 25px 0 20px;
+  &__item {
+    width: calc(100% / 4 - 6px);
+    height: 0;
+    padding-top: calc(100% / 4 - 6px);
+    position: relative;
+    margin-bottom: 8px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    > img {
+      width: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
+  &__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $primary_300;
+    height: 32px;
+    width: calc(100% / 2 + 6px);
+    display: flex;
+    align-items: center;
+    > p {
+      color: $light;
+      font-size: 15px;
+      line-height: 18px;
+      margin-left: 8px;
+      font-family: "Inter";
+    }
+  }
+}
+
+// Custom CircularProgressbar
+.CircularProgressbar-path {
+  stroke: $light !important;
+  stroke-width: 2px;
+}
+.CircularProgressbar-trail {
+  stroke: transparent !important;
+}

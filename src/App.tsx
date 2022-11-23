@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import DefaultLayout from 'components/layout/DefaultLayout';
 import ColumnPage from 'pages/ColumnPage';
 import MyRecordPage from 'pages/MyRecordPage';
-import TopPage from 'pages/TopPage';
+import TopPage from 'pages/TopPage/TopPage';
 import NotFound from 'pages/NotFound';
 import Development from 'pages/Development';
 import { ROUTES } from 'constants/routes';
