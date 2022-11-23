@@ -1,7 +1,8 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import IconClose from 'assets/img/navigation/icon_close.png';
-import { ROUTES } from 'constants/routes';
+import IconClose from "assets/img/navigation/icon_close.png";
+import { NAVIGATION_MENU } from "constants/common";
+import { ROUTES } from "constants/routes";
 
 type Props = {
   isShowMenu: boolean;
@@ -12,27 +13,27 @@ const HeaderMenu = ({ isShowMenu, handleHideMenu }: Props) => {
   const navigate = useNavigate();
   const menuItems = [
     {
-      title: '自分の記録',
+      title: NAVIGATION_MENU.MY_RECORDS,
       action: () => navigate(ROUTES.MY_RECORD),
     },
     {
-      title: '体重グラフ',
+      title: NAVIGATION_MENU.WEIGHT_CHART,
       action: () => navigate(ROUTES.DEVELOPMENT),
     },
     {
-      title: '目標',
+      title: NAVIGATION_MENU.GOAL,
       action: () => navigate(ROUTES.DEVELOPMENT),
     },
     {
-      title: '選択中のコース',
+      title: NAVIGATION_MENU.SELECTED_COURSE,
       action: () => navigate(ROUTES.DEVELOPMENT),
     },
     {
-      title: 'コラム一覧',
+      title: NAVIGATION_MENU.COLUMN_LIST,
       action: () => navigate(ROUTES.COLUMN),
     },
     {
-      title: '設定',
+      title: NAVIGATION_MENU.SETTINGS,
       action: () => navigate(ROUTES.DEVELOPMENT),
     },
   ];

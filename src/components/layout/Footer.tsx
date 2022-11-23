@@ -1,26 +1,38 @@
+import { FOOTER_FEATURES } from "constants/common";
+
 const Footer = () => {
   const featureItems = [
     {
-      title: '会員登録',
+      title: FOOTER_FEATURES.REGISTRATION,
+      action: () => {},
     },
     {
-      title: '運営会社',
+      title: FOOTER_FEATURES.OPERATING_COMPANY,
+      action: () => {},
     },
     {
-      title: '利用規約',
+      title: FOOTER_FEATURES.TERMS,
+      action: () => {},
     },
     {
-      title: '個人情報の取扱について',
+      title: FOOTER_FEATURES.HANDLE_PERSONAL_INFORMATION,
+      action: () => {},
     },
     {
-      title: '特定商取引法に基づく表記',
+      title: FOOTER_FEATURES.SPECIFIED_COMMERCIAL_TRANSACTION,
+      action: () => {},
     },
     {
-      title: 'お問い合わせ',
+      title: FOOTER_FEATURES.CONTACT_US,
+      action: () => {},
     },
   ];
   const renderFeatureItems = () =>
-    featureItems.map(({ title }) => <p key={title}>{title}</p>);
+    featureItems.map(({ title, action }) => (
+      <p onClick={action} key={title}>
+        {title}
+      </p>
+    ));
   return (
     <div className="footer">
       <div className="footer__container">{renderFeatureItems()}</div>
