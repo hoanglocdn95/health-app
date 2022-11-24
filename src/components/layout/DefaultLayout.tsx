@@ -6,6 +6,7 @@ import Footer from 'components/layout/Footer';
 
 const DefaultLayout = () => {
   const scrollToTop = () => window.scrollTo(0, 0);
+
   return (
     <>
       <Header />

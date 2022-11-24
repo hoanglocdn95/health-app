@@ -5,10 +5,7 @@
   top: calc(50% - 24px);
   right: 7.5%;
   border-radius: 999px;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
-  }
+  @include hover-effect("false");
 }
 
 .not-found,
@@ -25,7 +22,7 @@
   margin: 0;
   height: calc(100vh - 128px);
   padding-top: 164px;
-  cursor: pointer;
+  @include hover-effect("true", 1.1);
 }
 
 .buttonStyle {
@@ -39,8 +36,5 @@
   border: none;
   background-image: linear-gradient(to top right, #ffcc21, #ff963c);
   background-size: 300% 100%;
-  cursor: pointer;
-  &:hover {
-    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.15);
-  }
+  @include hover-effect("false");
 }

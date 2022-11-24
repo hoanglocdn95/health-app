@@ -18,16 +18,10 @@
   align-items: center;
   width: calc(27 / 64 * 100%);
   background-image: url("../../assets/img/meal/d01.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  @include bg-image(cover);
   &__circle {
     width: 181px;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 0.4s;
-    }
+    @include hover-effect("true");
   }
   &__data {
     display: flex;
@@ -62,16 +56,11 @@
     width: 116px;
     height: 134px;
     position: relative;
-    background: url("../../assets/img/bg_shape.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-image: url("../../assets/img/bg_shape.png");
     margin-right: 84px;
-    cursor: pointer;
-    &:hover {
-      transform: scale(1.1);
-      transition: transform 0.4s;
-    }
+    @include bg-image(contain);
+    @include hover-effect("true");
+
     > img {
       width: 56px;
       height: 56px;
@@ -105,18 +94,13 @@
     position: relative;
     margin-bottom: 8px;
     overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
+    @include bg-image(cover);
+    @include hover-effect("true");
+
     > img {
       width: 100%;
       position: absolute;
       top: 0;
-    }
-    &:hover {
-      transform: scale(1.05);
-      transition: transform 0.4s;
     }
   }
   &__info {

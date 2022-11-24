@@ -1,6 +1,7 @@
-@import './variable.scss';
-@import './layout.scss';
-@import './common.scss';
+@import "./variable.scss";
+@import "./mixins.scss";
+@import "./layout.scss";
+@import "./common.scss";
 // pages
-@import './pages/top.page.scss';
-
+@import "./pages/top.page.scss";
+@import "./pages/column.page.scss";
