@@ -18,3 +18,15 @@
     }
   }
 }
+
+@mixin truncateText($line: 2) {
+  overflow: hidden;
+  @if $line < 2 {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+  }
+}

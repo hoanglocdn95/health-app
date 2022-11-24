@@ -1,11 +1,18 @@
-import { DiaryType } from "types/myRecord.type";
+import format from 'date-fns/format';
+
+import { DATE_FORMAT } from 'constants/common';
+import { DiaryType } from 'types/myRecord.type';
 
 const DiaryItem = ({ date, content }: DiaryType) => {
   return (
     <div className="diaryRecord__item">
-      <p className="diaryRecord__content diaryRecord__item--big"></p>
-      <p className="diaryRecord__content diaryRecord__item--big"></p>
-      <p className="diaryRecord__content diaryRecord__item--long">{content}</p>
+      <div>
+        <div className="diaryRecord__date">
+          <p>{format(new Date(date), DATE_FORMAT.DEFAULT_DATE)}</p>
+          <p>{format(new Date(date), DATE_FORMAT.DEFAULT_TIME)}</p>
+        </div>
+        <p className="diaryRecord__content">{content}</p>
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
-  max-width: 960px;
+  max-width: $containerMaxWidth;
   margin-bottom: 56px;
   &__item {
     display: flex;
@@ -107,10 +107,7 @@
     }
   }
   &__description {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    @include truncateText(2);
   }
   &__hashtag {
     display: flex;

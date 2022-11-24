@@ -1,15 +1,15 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-import IconMemo from "assets/img/navigation/icon_memo.png";
-import IconChallenge from "assets/img/navigation/icon_challenge.png";
-import IconInfo from "assets/img/navigation/icon_info.png";
-import IconMenu from "assets/img/navigation/icon_menu.png";
-import Logo from "assets/img/navigation/logo.png";
-import { ROUTES } from "constants/routes";
+import IconMemo from 'assets/img/navigation/icon_memo.png';
+import IconChallenge from 'assets/img/navigation/icon_challenge.png';
+import IconInfo from 'assets/img/navigation/icon_info.png';
+import IconMenu from 'assets/img/navigation/icon_menu.png';
+import Logo from 'assets/img/navigation/logo.png';
+import { ROUTES } from 'constants/routes';
 
-import HeaderMenu from "components/layout/HeaderMenu";
-import { NAVIGATION_MENU } from "constants/common";
+import HeaderMenu from 'components/layout/HeaderMenu';
+import { NAVIGATION_MENU } from 'constants/common';
 
 const Header = () => {
   const [isShowMenu, setShowMenu] = useState(false);
@@ -29,7 +29,7 @@ const Header = () => {
       title: NAVIGATION_MENU.NEWS,
       srcIcon: IconInfo,
       action: () => navigate(ROUTES.DEVELOPMENT),
-      notices: 11,
+      notices: 1,
     },
   ];
   const renderNavbar = () => {

@@ -6,3 +6,264 @@
   width: 100%;
   background-color: $bg_primary;
 }
+
+.topicRecord {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: $containerMaxWidth;
+  margin-bottom: 56px;
+  &__item {
+    display: flex;
+    width: calc(100% / 3 - 32px);
+    height: 0;
+    padding-top: calc((100% / 3 - 32px));
+    position: relative;
+    background-color: $primary_300;
+    @include hover-effect("true");
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(100% / 12);
+    left: calc(100% / 12);
+    width: calc(100% - 48px);
+    height: calc(100% - 48px);
+
+    background-color: $dark_text_500;
+    & > div:first-child {
+      mix-blend-mode: luminosity;
+      opacity: 0.25;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @include bg-image(cover);
+    }
+    & > p {
+      text-align: center;
+      color: $primary_300;
+      font-size: 25px;
+      line-height: 30px;
+      font-family: "Inter";
+      z-index: $lowestLayer;
+    }
+  }
+  &__note {
+    height: 24px;
+    background-color: $primary_400;
+    width: 100% / 3 * 2;
+    margin-top: 11px;
+    z-index: $lowestLayer;
+    & > p {
+      text-align: center;
+      color: $light;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 300;
+    }
+  }
+}
+.bodyRecord {
+  background-color: $dark_text_500;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: $containerMaxWidth;
+  margin-bottom: 56px;
+  &__label {
+    color: $light;
+    font-family: "Inter";
+    font-weight: 400;
+    display: flex;
+    & > p {
+      &:first-child {
+        width: 70px;
+        font-size: 15px;
+        line-height: 18px;
+        margin-right: 20px;
+      }
+      &:last-child {
+        font-size: 22px;
+        line-height: 27px;
+        padding-top: 4px;
+      }
+    }
+  }
+  &__chart {
+    width: 100%;
+    max-height: 200px;
+    margin-bottom: 9px;
+  }
+  &__interval {
+    display: flex;
+    width: 100%;
+    height: 24px;
+    & > .intervalLabel {
+      width: 56px;
+      height: 100%;
+      background-color: $light;
+      border-radius: 11px;
+      margin-right: 16px;
+      & > p {
+        color: $primary_300;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: center;
+      }
+      &--active {
+        background-color: $primary_300;
+        & > p {
+          color: $light;
+        }
+      }
+    }
+  }
+}
+.exerciseRecord {
+  background-color: $dark_text_500;
+  padding: 16px 24px;
+  width: 100%;
+  max-width: $containerMaxWidth;
+  margin-bottom: 56px;
+  &__label {
+    color: $light;
+    font-family: "Inter";
+    font-weight: 400;
+    display: flex;
+    & > p {
+      &:first-child {
+        width: 70px;
+        font-size: 15px;
+        line-height: 18px;
+        margin-right: 20px;
+      }
+      &:last-child {
+        font-size: 22px;
+        line-height: 27px;
+        padding-top: 4px;
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 192px;
+    width: 100%;
+    overflow: auto;
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      border-radius: 3px;
+      background-color: $gray_400;
+    }
+
+    &::-webkit-scrollbar {
+      border-radius: 3px;
+      width: 6px;
+      background-color: $gray_400;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background-color: $primary_300;
+    }
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 40px);
+    padding: 6px 20px 2px 16px;
+    margin-right: 40px;
+    border-bottom: 1px solid $gray_400;
+  }
+  &__content {
+    & > div {
+      color: $light;
+      font-size: 15px;
+      line-height: 20px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: -15px;
+        width: 4px;
+        height: 4px;
+        border-radius: 999px;
+        background-color: $light;
+      }
+    }
+    & > p {
+      font-size: 15px;
+      line-height: 18px;
+      color: $primary_300;
+      font-family: "Inter";
+    }
+  }
+  &__duration {
+    color: $primary_300;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Inter";
+    text-align: right;
+  }
+}
+
+.diaryRecord {
+  width: 100%;
+  max-width: $containerMaxWidth;
+  margin-bottom: 18px;
+  & > p {
+    text-align: left;
+    font-size: 22px;
+    line-height: 27px;
+    font-family: "Inter";
+    margin-bottom: 5px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    width: calc(100% / 4 - 9px);
+    height: 0;
+    padding-top: calc((100% / 4 - 9px));
+    position: relative;
+    border: 2px solid $border;
+    margin-bottom: 12px;
+    @include hover-effect("true");
+    & > div {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 16px;
+    }
+  }
+  &__date {
+    margin-bottom: 10px;
+    & > p {
+      font-family: "Inter";
+      color: $dark_text_500;
+      font-size: 18px;
+      line-height: 22px;
+      text-align: left;
+    }
+  }
+  &__content {
+    color: $dark_text_500;
+    font-size: 12px;
+    line-height: 17px;
+    white-space: pre-line;
+    @include truncateText(7);
+  }
+}
