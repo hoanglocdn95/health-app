@@ -1,6 +1,6 @@
-import { DATE_FORMAT } from 'constants/common';
-import format from 'date-fns/format';
-import { HashtagType, RecommendType } from 'types/column.type';
+import { DATE_FORMAT } from "constants/common";
+import format from "date-fns/format";
+import { HashtagType, RecommendType } from "types/column.type";
 
 const RecommendItem = ({
   date,
@@ -23,8 +23,8 @@ const RecommendItem = ({
           }}
         >
           <div>
-            <p>{format(new Date(date), DATE_FORMAT.RECOMMEND_DATE)}</p>
-            <p>{format(new Date(date), DATE_FORMAT.RECOMMEND_TIME)}</p>
+            <p>{format(new Date(date), DATE_FORMAT.DEFAULT_DATE)}</p>
+            <p>{format(new Date(date), DATE_FORMAT.DEFAULT_TIME)}</p>
           </div>
         </div>
         <div className="recommendList__description">{content}</div>
